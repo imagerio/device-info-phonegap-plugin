@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	<meta charset="utf-8">
+
+
+	<!-- iPad/iPhone specific css below, add after your main css >
+	<link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />		
+	<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />		
+	-->
+	<!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
+	<script type="text/javascript" charset="utf-8" src="cordova-1.6.1.js"></script>
+	<script type="text/javascript" charset="utf-8" src="plugins/DeviceInfoPlugin.js"></script>     
+    <style>
+        .device-info {
+            padding: 10px;
+            font-size: 12px;
+            white-space: pre-wrap;      /* CSS3 */   
+            white-space: -moz-pre-wrap; /* Firefox */    
+            white-space: -pre-wrap;     /* Opera <7 */   
+            white-space: -o-pre-wrap;   /* Opera 7 */    
+            word-wrap: break-word;      /* IE */
+        }
+    </style>
+    <script type="text/javascript">
+
+
+	// If you want to prevent dragging, uncomment this section
+	/*
+	function preventBehavior(e) 
+	{ 
+      e.preventDefault(); 
+    };
+	document.addEventListener("touchmove", preventBehavior, false);
+	*/
+	
+	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
+	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+	for more details -jm */
+	/*
+	function handleOpenURL(url)
+	{
+		// TODO: do something with the url passed in.
+	}
+	*/
+	
+	function onBodyLoad()
+	{		
+		document.addEventListener("deviceready", onDeviceReady, false);
+	}
+	
+	/* When this function is called, Cordova has been initialized and is ready to roll */
+	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
+	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+	for more details -jm */
+	function onDeviceReady()
+	{
+        if (window.plugins.DeviceInfoPlugin) {
+            console.log('window.plugins.DeviceInfoPlugin exists');
+            window.plugins.DeviceInfoPlugin.getDeviceInfo(function success(result) {
+                                                          document.getElementById('deviceInfoRaw').innerHTML = result;
+                                                            console.log('success: getDeviceInfo: result:'+result);
+                                                          }, 
+                                                          function failure(result) {
+                                                            console.log('failure: getDeviceInfo: result:'+result);
+                                                          }, 
+                                                          false /*isSHA1, default=true*/, 
+                                                          false /*isBase64, default=true*/
+                                                          );
+            
+            window.plugins.DeviceInfoPlugin.getDeviceInfo(function success(result) {
+                                                          document.getElementById('deviceInfoSHA1').innerHTML = result;
+                                                          console.log('success: getDeviceInfo: result:'+result);
+                                                          }, 
+                                                          function failure(result) {
+                                                          console.log('failure: getDeviceInfo: result:'+result);
+                                                          }, 
+                                                          true /*isSHA1, default=true*/, 
+                                                          false /*isBase64, default=true*/
+                                                          );
+            
+            window.plugins.DeviceInfoPlugin.getDeviceInfo(function success(result) {
+                                                          document.getElementById('deviceInfoSHA1Base64').innerHTML = result;
+                                                          console.log('success: getDeviceInfo: result:'+result);
+                                                          }, 
+                                                          function failure(result) {
+                                                          console.log('failure: getDeviceInfo: result:'+result);
+                                                          }
+                                                          //, 
+                                                          //true /*isSHA1, default=true*/, 
+                                                          //true /*isBase64, default=true*/
+                                                          );
+        } else {
+            console.log('window.plugins.DeviceInfoPlugin does NOT exist');
+        }
+	}
+    
+    </script>
+  </head>
+  <body onload="onBodyLoad()">
+      <h1>Device Info</h1>
+      <h2>Device info raw</h2>  
+      <div class="device-info" id="deviceInfoRaw"></div>
+      <h2>Device info after SHA1</h2>  
+      <div class="device-info" id="deviceInfoSHA1"></div>
+      <h2>Device info after SHA1 and Base64</h2>  
+      <div class="device-info" id="deviceInfoSHA1Base64"></div>  
+  </body>
+</html>

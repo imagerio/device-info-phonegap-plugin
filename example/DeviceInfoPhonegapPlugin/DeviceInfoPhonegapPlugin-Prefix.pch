@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'DeviceInfoPhonegapPlugin' target in the 'DeviceInfoPhonegapPlugin' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif
