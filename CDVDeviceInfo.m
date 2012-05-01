@@ -27,15 +27,9 @@
     // en0 is for WiFi 
     NICInfo* wifi_info = [summary findNICInfo:@"en0"];
     NSLog(@"wifi macAddress: %@", wifi_info.macAddress);
-    // pdp_ip0 is for 3G
-    NICInfo* threeg_info = [summary findNICInfo:@"pdp_ip0"];
-    NSLog(@"3G macAddress: %@", threeg_info.macAddress);
 
     NSString* result = @"";
-    if (threeg_info.macAddress) {
-        result = threeg_info.macAddress;
-    }
-    if ([result isEqualToString:@""] && wifi_info.macAddress) {
+    if (wifi_info.macAddress) {
         result = wifi_info.macAddress;
     }
     
