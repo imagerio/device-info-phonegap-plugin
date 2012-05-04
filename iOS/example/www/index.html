@@ -67,8 +67,7 @@
                                                           function failure(result) {
                                                             console.log('failure: getDeviceInfo: result:'+result);
                                                           }, 
-                                                          false /*isSHA1, default=true*/, 
-                                                          false /*isBase64, default=true*/
+                                                          false /*isSHA1, default=true*/
                                                           );
             
             window.plugins.DeviceInfoPlugin.getDeviceInfo(function success(result) {
@@ -78,8 +77,7 @@
                                                           function failure(result) {
                                                           console.log('failure: getDeviceInfo: result:'+result);
                                                           }, 
-                                                          true /*isSHA1, default=true*/, 
-                                                          false /*isBase64, default=true*/
+                                                          true /*isSHA1, default=true*/
                                                           );
             
             window.plugins.DeviceInfoPlugin.getDeviceInfo(function success(result) {
@@ -90,8 +88,7 @@
                                                           console.log('failure: getDeviceInfo: result:'+result);
                                                           }
                                                           //, 
-                                                          //true /*isSHA1, default=true*/, 
-                                                          //true /*isBase64, default=true*/
+                                                          //true /*isSHA1, default=true*/
                                                           );
         } else {
             console.log('window.plugins.DeviceInfoPlugin does NOT exist');
@@ -102,11 +99,11 @@
   </head>
   <body onload="onBodyLoad()">
       <h1>Device Info</h1>
-      <h2>Device info raw</h2>  
+      <h2>Device info base64</h2>  
       <div class="device-info" id="deviceInfoRaw"></div>
-      <h2>Device info after SHA1</h2>  
+      <h2>Device info after SHA1 and base64</h2>  
       <div class="device-info" id="deviceInfoSHA1"></div>
-      <h2>Device info after SHA1 and Base64</h2>  
+      <h2>Device info after SHA1 and Base64 - implicit call</h2>  
       <div class="device-info" id="deviceInfoSHA1Base64"></div>  
   </body>
 </html>

@@ -9,9 +9,11 @@
 #import "CDVDeviceInfo.h"
 #import "NICInfoSummary.h"
 #import <CommonCrypto/CommonDigest.h>
+#import "Encode.h"
 
 @interface CDVDeviceInfo (Private)
 - (NSString *)sha1:(NSString*)origData;
+
 @end
 
 @implementation CDVDeviceInfo
@@ -40,6 +42,13 @@
             NSLog(@"doing sha1");
             result = [self sha1:result];
         }
+    }
+    
+    // encode to Base64
+    if (![result isEqualToString:@""]) {
+        NSLog(@"doing base64, result before: %@", result);
+        result = [Encode encodeBase64WithString:result];
+        NSLog(@"doing base64, result after: %@", result);
     }
     
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:result];

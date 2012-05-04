@@ -42,6 +42,7 @@
 		65796782154EDBEA00BF91DC /* www in Resources */ = {isa = PBXBuildFile; fileRef = 65796781154EDBEA00BF91DC /* www */; };
 		6579678D154FC12100BF91DC /* NICInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6579678A154FC12100BF91DC /* NICInfo.m */; };
 		6579678E154FC12100BF91DC /* NICInfoSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 6579678C154FC12100BF91DC /* NICInfoSummary.m */; };
+		65F7A24615541D900040A7F6 /* Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F7A24515541D900040A7F6 /* Encode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,8 @@
 		6579678A154FC12100BF91DC /* NICInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NICInfo.m; sourceTree = "<group>"; };
 		6579678B154FC12100BF91DC /* NICInfoSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NICInfoSummary.h; sourceTree = "<group>"; };
 		6579678C154FC12100BF91DC /* NICInfoSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NICInfoSummary.m; sourceTree = "<group>"; };
+		65F7A24415541D900040A7F6 /* Encode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Encode.h; path = Classes/Encode.h; sourceTree = "<group>"; };
+		65F7A24515541D900040A7F6 /* Encode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Encode.m; path = Classes/Encode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +266,8 @@
 				6516FB41154ED805009EDC70 /* AppDelegate.m */,
 				6516FB43154ED805009EDC70 /* MainViewController.h */,
 				6516FB44154ED805009EDC70 /* MainViewController.m */,
+				65F7A24415541D900040A7F6 /* Encode.h */,
+				65F7A24515541D900040A7F6 /* Encode.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -380,6 +385,7 @@
 				6579677F154ED99500BF91DC /* CDVDeviceInfo.m in Sources */,
 				6579678D154FC12100BF91DC /* NICInfo.m in Sources */,
 				6579678E154FC12100BF91DC /* NICInfoSummary.m in Sources */,
+				65F7A24615541D900040A7F6 /* Encode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +465,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -479,6 +486,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

@@ -11,16 +11,12 @@ function DeviceInfoPlugin()
 }
 
 
-DeviceInfoPlugin.prototype.getDeviceInfo = function(successCallback, failCallback, isSHA1, isBase64)
+DeviceInfoPlugin.prototype.getDeviceInfo = function(successCallback, failCallback, isSHA1)
 {
     console.log('getDeviceInfo js called');
     var shouldSHA1 = (typeof isSHA1)==="undefined" ? true : isSHA1;
-    var shouldBase64 = (typeof isBase64)==="undefined" ? true : isBase64;
 	cordovaRef.exec(function(result) {
 			var final = result;
-			if (shouldBase64) {
-				final = btoa(result);
-			}
 			successCallback(final);
 		}, failCallback, "DeviceInfo", "getDeviceInfo", [shouldSHA1.toString()]);
     
