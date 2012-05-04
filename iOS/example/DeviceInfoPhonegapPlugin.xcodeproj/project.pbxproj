@@ -40,9 +40,9 @@
 		6516FB4B154ED805009EDC70 /* verify.sh in Resources */ = {isa = PBXBuildFile; fileRef = 6516FB4A154ED805009EDC70 /* verify.sh */; };
 		6579677F154ED99500BF91DC /* CDVDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6579677E154ED99500BF91DC /* CDVDeviceInfo.m */; };
 		65796782154EDBEA00BF91DC /* www in Resources */ = {isa = PBXBuildFile; fileRef = 65796781154EDBEA00BF91DC /* www */; };
-		6579678D154FC12100BF91DC /* NICInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6579678A154FC12100BF91DC /* NICInfo.m */; };
-		6579678E154FC12100BF91DC /* NICInfoSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 6579678C154FC12100BF91DC /* NICInfoSummary.m */; };
 		65F7A24615541D900040A7F6 /* Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F7A24515541D900040A7F6 /* Encode.m */; };
+		65F7A24B155420C80040A7F6 /* NICInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F7A248155420C80040A7F6 /* NICInfo.m */; };
+		65F7A24C155420C80040A7F6 /* NICInfoSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F7A24A155420C80040A7F6 /* NICInfoSummary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,12 +86,12 @@
 		6579677D154ED99500BF91DC /* CDVDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVDeviceInfo.h; path = ../../CDVDeviceInfo.h; sourceTree = "<group>"; };
 		6579677E154ED99500BF91DC /* CDVDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVDeviceInfo.m; path = ../../CDVDeviceInfo.m; sourceTree = "<group>"; };
 		65796781154EDBEA00BF91DC /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
-		65796789154FC12100BF91DC /* NICInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NICInfo.h; sourceTree = "<group>"; };
-		6579678A154FC12100BF91DC /* NICInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NICInfo.m; sourceTree = "<group>"; };
-		6579678B154FC12100BF91DC /* NICInfoSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NICInfoSummary.h; sourceTree = "<group>"; };
-		6579678C154FC12100BF91DC /* NICInfoSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NICInfoSummary.m; sourceTree = "<group>"; };
 		65F7A24415541D900040A7F6 /* Encode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Encode.h; path = Classes/Encode.h; sourceTree = "<group>"; };
 		65F7A24515541D900040A7F6 /* Encode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Encode.m; path = Classes/Encode.m; sourceTree = "<group>"; };
+		65F7A247155420C80040A7F6 /* NICInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NICInfo.h; path = Classes/NICInfo.h; sourceTree = "<group>"; };
+		65F7A248155420C80040A7F6 /* NICInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NICInfo.m; path = Classes/NICInfo.m; sourceTree = "<group>"; };
+		65F7A249155420C80040A7F6 /* NICInfoSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NICInfoSummary.h; path = Classes/NICInfoSummary.h; sourceTree = "<group>"; };
+		65F7A24A155420C80040A7F6 /* NICInfoSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NICInfoSummary.m; path = Classes/NICInfoSummary.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,10 +258,10 @@
 		6516FB3F154ED805009EDC70 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				65796789154FC12100BF91DC /* NICInfo.h */,
-				6579678A154FC12100BF91DC /* NICInfo.m */,
-				6579678B154FC12100BF91DC /* NICInfoSummary.h */,
-				6579678C154FC12100BF91DC /* NICInfoSummary.m */,
+				65F7A247155420C80040A7F6 /* NICInfo.h */,
+				65F7A248155420C80040A7F6 /* NICInfo.m */,
+				65F7A249155420C80040A7F6 /* NICInfoSummary.h */,
+				65F7A24A155420C80040A7F6 /* NICInfoSummary.m */,
 				6516FB40154ED805009EDC70 /* AppDelegate.h */,
 				6516FB41154ED805009EDC70 /* AppDelegate.m */,
 				6516FB43154ED805009EDC70 /* MainViewController.h */,
@@ -383,9 +383,9 @@
 				6516FB42154ED805009EDC70 /* AppDelegate.m in Sources */,
 				6516FB45154ED805009EDC70 /* MainViewController.m in Sources */,
 				6579677F154ED99500BF91DC /* CDVDeviceInfo.m in Sources */,
-				6579678D154FC12100BF91DC /* NICInfo.m in Sources */,
-				6579678E154FC12100BF91DC /* NICInfoSummary.m in Sources */,
 				65F7A24615541D900040A7F6 /* Encode.m in Sources */,
+				65F7A24B155420C80040A7F6 /* NICInfo.m in Sources */,
+				65F7A24C155420C80040A7F6 /* NICInfoSummary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
